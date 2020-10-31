@@ -19,6 +19,7 @@ public class FirstRatings {
     }
 
     public void loadMovie(String filename) throws IOException {
+        System.out.println("Add something");
         List<Movie> movieList = new ArrayList<>();
         FileResource fileResource = new FileResource(filename);
         CSVParser fileParser = fileResource.getCSVParser();
