@@ -26,7 +26,6 @@ public class FirstRatings {
         for (CSVRecord record : fileParser.getRecords()) {
             Movie movie = new Movie(record.get("id"), record.get("title"), record.get("year"), record.get("genre"),
                     record.get("director"), record.get("country"), record.get("poster"), Integer.parseInt(record.get("minutes")));
-//            System.out.println(movie);
             movieList.add(movie);
         }
         System.out.println("There are " + genreTypeNum(movieList, "Comedy") + " Comedy movies");
@@ -39,7 +38,7 @@ public class FirstRatings {
     private int genreTypeNum(List<Movie> movieList, String genreType) {
         int count = 0;
         for (Movie movie : movieList) {
-            if (movie.getGenres().indexOf(genreType) != -1) {
+            if (movie.getGenres().contains(genreType)) {
                 count++;
             }
         }
