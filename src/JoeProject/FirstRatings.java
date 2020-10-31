@@ -22,7 +22,7 @@ public class FirstRatings {
         List<Movie> movieList = new ArrayList<>();
         FileResource fileResource = new FileResource(filename);
         CSVParser fileParser = fileResource.getCSVParser();
-        System.out.println("say something123457");
+        System.out.println("say 123456");
         for (CSVRecord record : fileParser.getRecords()) {
             Movie movie = new Movie(record.get("id"), record.get("title"), record.get("year"), record.get("genre"),
                     record.get("director"), record.get("country"), record.get("poster"), Integer.parseInt(record.get("minutes")));
@@ -89,7 +89,7 @@ public class FirstRatings {
     public void loadRaters(String filename) throws IOException {
         FileResource fileResource = new FileResource(filename);
         CSVParser fileParser = fileResource.getCSVParser();
-
+        System.out.println("say something");
         for (CSVRecord record : fileParser.getRecords()) {
             Rater rater;
             String rater_id = record.get("rater_id");
