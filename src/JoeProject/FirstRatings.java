@@ -22,7 +22,7 @@ public class FirstRatings {
         List<Movie> movieList = new ArrayList<>();
         FileResource fileResource = new FileResource(filename);
         CSVParser fileParser = fileResource.getCSVParser();
-        System.out.println("say something");
+        System.out.println("say something12345");
         for (CSVRecord record : fileParser.getRecords()) {
             Movie movie = new Movie(record.get("id"), record.get("title"), record.get("year"), record.get("genre"),
                     record.get("director"), record.get("country"), record.get("poster"), Integer.parseInt(record.get("minutes")));
