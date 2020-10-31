@@ -88,7 +88,7 @@ public class FirstRatings {
     public void loadRaters(String filename) throws IOException {
         FileResource fileResource = new FileResource(filename);
         CSVParser fileParser = fileResource.getCSVParser();
-
+        System.out.println("say something");
         for (CSVRecord record : fileParser.getRecords()) {
             Rater rater;
             String rater_id = record.get("rater_id");
